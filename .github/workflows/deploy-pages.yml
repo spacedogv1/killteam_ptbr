@@ -37,11 +37,6 @@ jobs:
           cache: pnpm
           cache-dependency-path: app/pnpm-lock.yaml
 
-      - name: Configurar pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10
-
       - name: Instalar dependências
         working-directory: app
         run: pnpm install --frozen-lockfile
@@ -59,12 +54,14 @@ jobs:
           mkdir -p _site
           cp -R app/dist/client/. _site/
           mkdir -p _site/killteam_ptbr
+          cp -R app/dist/client/_next _site/killteam_ptbr/_next
           cp -R app/dist/client/data _site/killteam_ptbr/
           cp app/dist/client/favicon.svg _site/killteam_ptbr/favicon.svg
           cp app/dist/client/manifest.webmanifest _site/killteam_ptbr/manifest.webmanifest
           cp app/dist/client/sw.js _site/killteam_ptbr/sw.js
           cp app/dist/server/prerendered-routes/index.html _site/index.html
           cp app/dist/server/prerendered-routes/404.html _site/404.html
+          sed -i 's|/_next/|/killteam_ptbr/_next/|g' _site/index.html _site/404.html
           touch _site/.nojekyll
 
       - name: Configurar GitHub Pages
