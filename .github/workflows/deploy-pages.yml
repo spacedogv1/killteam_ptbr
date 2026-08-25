@@ -54,7 +54,7 @@ jobs:
           mkdir -p _site
           cp -R app/dist/client/. _site/
           mkdir -p _site/killteam_ptbr
-          cp -R app/dist/client/_next _site/killteam_ptbr/_next
+          cp -R _site/_next _site/killteam_ptbr/_next
           cp -R app/dist/client/data _site/killteam_ptbr/
           cp app/dist/client/favicon.svg _site/killteam_ptbr/favicon.svg
           cp app/dist/client/manifest.webmanifest _site/killteam_ptbr/manifest.webmanifest
