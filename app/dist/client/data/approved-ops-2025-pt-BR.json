@@ -1,0 +1,363 @@
+{
+  "schema_version": "1.0.0",
+  "pack": "Approved Ops 2025",
+  "language": "pt-BR",
+  "translated_on": "2026-08-24",
+  "based_on": "../approved-ops-2025-en/approved-ops-2025-en.json",
+  "errata_status": "English source incorporates official errata through April 2026",
+  "terminology": {
+    "Crit Op": "Operação Crítica (Crit Op)",
+    "Tac Op": "Operação Tática (Tac Op)",
+    "Kill Op": "Operação de Eliminação (Kill Op)",
+    "Primary Op": "Operação Primária (Primary Op)",
+    "Turning Point": "Ponto de Virada",
+    "control range": "Alcance de Controle",
+    "Conceal order": "ordem de Ocultação",
+    "Engage order": "ordem de Engajar",
+    "Ready step": "etapa Pronto",
+    "Strategy phase": "Fase de Estratégia",
+    "Strategic Gambit": "MANOBRA ESTRATÉGICA",
+    "objective marker": "marcador de objetivo",
+    "mission marker": "marcador de missão",
+    "contest": "disputar",
+    "control": "controlar",
+    "killzone": "zona de combate",
+    "drop zone": "zona de desembarque",
+    "APL": "APL (sigla de regra mantida)",
+    "AP": "PA",
+    "VP": "PV"
+  },
+  "kill_op": {
+    "title": "Operação de Eliminação (Kill Op)",
+    "grade_thresholds_by_starting_enemy_operatives": {
+      "5": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "6": [
+        1,
+        2,
+        4,
+        5,
+        6
+      ],
+      "7": [
+        1,
+        3,
+        4,
+        6,
+        7
+      ],
+      "8": [
+        2,
+        3,
+        5,
+        6,
+        8
+      ],
+      "9": [
+        2,
+        4,
+        5,
+        7,
+        9
+      ],
+      "10": [
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "11": [
+        2,
+        4,
+        7,
+        9,
+        11
+      ],
+      "12": [
+        2,
+        5,
+        7,
+        10,
+        12
+      ],
+      "13": [
+        3,
+        5,
+        8,
+        10,
+        13
+      ],
+      "14": [
+        3,
+        6,
+        8,
+        11,
+        14
+      ]
+    },
+    "asset": "assets/kill-grade.png"
+  },
+  "cards": [
+    {
+      "id": "crit-op-01-secure",
+      "kind": "crit_op",
+      "number": 1,
+      "name": "Assegurar",
+      "content_markdown": "AÇÃO DE MISSÃO\nAssegurar — 1PA\nUm marcador de objetivo controlado pelo operativo ativo é assegurado pela sua kill team até que a kill team inimiga assegure esse marcador de objetivo.\n\nUm operativo não pode realizar esta ação no primeiro Ponto de Virada nem enquanto estiver no Alcance de Controle de um operativo inimigo.\n\nPONTOS DE VITÓRIA\nAo final de cada Ponto de Virada após o primeiro:\n- Se algum marcador de objetivo estiver assegurado pela sua kill team, você marca 1PV.\n- Se a sua kill team tiver mais marcadores de objetivo assegurados do que a kill team do oponente, você marca 1PV.",
+      "source": {
+        "name_en": "Secure",
+        "source_card_id": "crit-op-01-secure"
+      }
+    },
+    {
+      "id": "crit-op-02-loot",
+      "kind": "crit_op",
+      "number": 2,
+      "name": "Saquear",
+      "content_markdown": "AÇÃO DE MISSÃO\nSaquear — 1PA\nUm marcador de objetivo controlado pelo operativo ativo é saqueado.\n\nUm operativo não pode realizar esta ação no primeiro Ponto de Virada, enquanto estiver no Alcance de Controle de um operativo inimigo ou se aquele marcador de objetivo já tiver sido saqueado neste Ponto de Virada.\n\nPONTOS DE VITÓRIA\nSempre que um operativo aliado realizar a ação Saquear, você marca 1PV (até o máximo de 2PV por Ponto de Virada).",
+      "source": {
+        "name_en": "Loot",
+        "source_card_id": "crit-op-02-loot"
+      }
+    },
+    {
+      "id": "crit-op-03-transmission",
+      "kind": "crit_op",
+      "number": 3,
+      "name": "Transmissão",
+      "content_markdown": "AÇÃO DE MISSÃO\nIniciar Transmissão — 1PA\nUm marcador de objetivo controlado pelo operativo ativo fica transmitindo até o início do próximo Ponto de Virada.\n\nUm operativo não pode realizar esta ação no primeiro Ponto de Virada nem enquanto estiver no Alcance de Controle de um operativo inimigo.\n\nPONTOS DE VITÓRIA\nAo final de cada Ponto de Virada após o primeiro:\n- Se operativos aliados controlarem algum marcador de objetivo que esteja transmitindo, você marca 1PV.\n- Se operativos aliados controlarem mais marcadores de objetivo que estejam transmitindo do que os operativos inimigos, você marca 1PV.",
+      "source": {
+        "name_en": "Transmission",
+        "source_card_id": "crit-op-03-transmission"
+      }
+    },
+    {
+      "id": "crit-op-04-orb",
+      "kind": "crit_op",
+      "number": 4,
+      "name": "Orbe",
+      "content_markdown": "AÇÃO DE MISSÃO\nMover Orbe — 1PA\nSe o operativo ativo controlar o marcador de objetivo que possui o marcador de Orbe, mova esse marcador da seguinte forma:\n- Se o marcador de objetivo central o possuir, mova-o para o marcador de objetivo de qualquer jogador, à sua escolha.\n- Se o marcador de objetivo de um jogador o possuir, mova-o para o marcador de objetivo central.\n\nUm operativo não pode realizar esta ação no primeiro Ponto de Virada, enquanto estiver no Alcance de Controle de um operativo inimigo ou se não controlar o marcador de objetivo que possui o marcador de Orbe.\n\nREGRAS ADICIONAIS\nNo início da batalha, o marcador de objetivo central possui o marcador de Orbe.\n\nPONTOS DE VITÓRIA\nAo final de cada Ponto de Virada após o primeiro, para cada marcador de objetivo controlado por operativos aliados que não possua o marcador de Orbe, você marca 1PV.",
+      "source": {
+        "name_en": "Orb",
+        "source_card_id": "crit-op-04-orb"
+      }
+    },
+    {
+      "id": "crit-op-05-stake-claim",
+      "kind": "crit_op",
+      "number": 5,
+      "name": "Reivindicar",
+      "content_markdown": "REGRAS ADICIONAIS\nNo início da etapa de Manobra de cada Fase de Estratégia após a primeira, começando pelo jogador com a iniciativa, cada jogador deve escolher um marcador de objetivo e uma das seguintes reivindicações para aquele Ponto de Virada:\n- Operativos aliados controlarão aquele marcador de objetivo ao final deste Ponto de Virada.\n- Operativos inimigos não disputarão aquele marcador de objetivo ao final deste Ponto de Virada.\n\nCada jogador não pode escolher o mesmo marcador de objetivo mais de uma vez por batalha; portanto, deve escolher cada marcador de objetivo uma vez durante a batalha.\n\nPONTOS DE VITÓRIA\nAo final de cada Ponto de Virada após o primeiro:\n- Se operativos aliados controlarem mais marcadores de objetivo do que os operativos inimigos, você marca 1PV.\n- Se a sua reivindicação escolhida for verdadeira, você marca 1PV.",
+      "source": {
+        "name_en": "Stake Claim",
+        "source_card_id": "crit-op-05-stake-claim"
+      }
+    },
+    {
+      "id": "crit-op-06-energy-cells",
+      "kind": "crit_op",
+      "number": 6,
+      "name": "Células de Energia",
+      "content_markdown": "REGRAS ADICIONAIS\nOs operativos podem realizar a ação Pegar Marcador em cada marcador de objetivo nos seguintes Pontos de Virada:\n- 2, mas você deve gastar 2PA adicionais; essa ação não pode ser gratuita e seu custo em PA não pode ser reduzido.\n- 3, mas você deve gastar 1PA adicional; essa ação não pode ser gratuita e seu custo em PA não pode ser reduzido.\n- 4, normalmente.\n\nSempre que um operativo estiver carregando um marcador de objetivo, ele não pode ser removido e preparado novamente a mais de 6\" de distância.\n\nPONTOS DE VITÓRIA\nAo final de cada Ponto de Virada após o primeiro, se operativos aliados controlarem mais marcadores de objetivo do que os operativos inimigos, você marca 1PV.\n\nAo final da batalha, para cada marcador de objetivo que operativos aliados estiverem carregando, você marca 1PV.",
+      "source": {
+        "name_en": "Energy Cells",
+        "source_card_id": "crit-op-06-energy-cells"
+      }
+    },
+    {
+      "id": "crit-op-07-download",
+      "kind": "crit_op",
+      "number": 7,
+      "name": "Baixar Dados",
+      "content_markdown": "AÇÃO DE MISSÃO\nBaixar Dados — 1PA\nUm marcador de objetivo central ou do oponente controlado pelo operativo ativo é baixado.\n\nUm operativo não pode realizar esta ação no primeiro ou no segundo Ponto de Virada, enquanto estiver no Alcance de Controle de um operativo inimigo ou se aquele marcador de objetivo já tiver sido baixado durante a batalha.\n\nPONTOS DE VITÓRIA\nAo final de cada Ponto de Virada após o primeiro, se operativos aliados controlarem mais marcadores de objetivo do que os operativos inimigos, você marca 1PV. Ignore os marcadores de objetivo baixados ao determinar isso.\n\nSempre que um operativo aliado realizar a ação Baixar Dados no terceiro Ponto de Virada, você marca 1PV.\n\nSempre que um operativo aliado realizar a ação Baixar Dados no quarto Ponto de Virada, você marca 2PV.",
+      "source": {
+        "name_en": "Download",
+        "source_card_id": "crit-op-07-download"
+      }
+    },
+    {
+      "id": "crit-op-08-data",
+      "kind": "crit_op",
+      "number": 8,
+      "name": "Dados",
+      "content_markdown": "AÇÃO DE MISSÃO\nCompilar Dados — 1PA\nUm marcador de objetivo controlado pelo operativo ativo recebe 1 ponto de Dados. Use um dado como marcador para acompanhar os pontos de Dados naquele marcador de objetivo.\n\nUm operativo não pode realizar esta ação no primeiro Ponto de Virada, enquanto estiver no Alcance de Controle de um operativo inimigo ou se aquele marcador de objetivo já tiver recebido um ponto de Dados neste Ponto de Virada.\n\nEnviar Dados — 1PA\nRemova todos os pontos de Dados de um marcador de objetivo controlado pelo operativo ativo.\n\nUm operativo não pode realizar esta ação no primeiro, segundo ou terceiro Ponto de Virada, enquanto estiver no Alcance de Controle de um operativo inimigo ou se aquele marcador de objetivo não tiver pontos de Dados para remover.\n\nPONTOS DE VITÓRIA\nAo final do segundo e do terceiro Ponto de Virada, se operativos aliados tiverem realizado mais ações Compilar Dados naquele Ponto de Virada do que os operativos inimigos, você marca 1PV.\n\nSempre que um operativo aliado realizar a ação Enviar Dados, você marca uma quantidade de PV igual ao número de pontos de Dados removidos.",
+      "source": {
+        "name_en": "Data",
+        "source_card_id": "crit-op-08-data"
+      }
+    },
+    {
+      "id": "crit-op-09-reboot",
+      "kind": "crit_op",
+      "number": 9,
+      "name": "Reiniciar",
+      "content_markdown": "REGRAS ADICIONAIS\nAo preparar a batalha, depois de preparar os marcadores de objetivo, numere cada marcador de objetivo de 1 a 3. No início da etapa de Manobra de cada Fase de Estratégia, cada jogador escolhe secretamente um marcador de objetivo colocando na mão uma quantidade de dados igual ao número daquele marcador e então ambos revelam simultaneamente. Se ambos escolherem o mesmo marcador, esse marcador de objetivo fica inativo durante este Ponto de Virada. Caso contrário, o marcador de objetivo que nenhum jogador escolheu fica inativo durante este Ponto de Virada.\n\nAÇÃO DE MISSÃO\nReiniciar — 2PA\nUm marcador de objetivo inativo controlado pelo operativo ativo deixa de ficar inativo.\n\nUm operativo não pode realizar esta ação no primeiro Ponto de Virada nem enquanto estiver no Alcance de Controle de um operativo inimigo.\n\nPONTOS DE VITÓRIA\nAo final de cada Ponto de Virada após o primeiro, para cada marcador de objetivo controlado por operativos aliados, você marca 1PV. Ignore os marcadores de objetivo inativos ao determinar isso.",
+      "source": {
+        "name_en": "Reboot",
+        "source_card_id": "crit-op-09-reboot"
+      }
+    },
+    {
+      "id": "tac-op-infiltration-plant-devices",
+      "kind": "tac_op",
+      "number": 1,
+      "name": "Posicionar Dispositivos",
+      "archetype": "Infiltração",
+      "content_markdown": "REVELAR\nNa primeira vez que um operativo aliado realizar a ação Posicionar Dispositivo.\n\nAÇÃO DE MISSÃO\nPosicionar Dispositivo — 1PA\nUm marcador de objetivo controlado pelo operativo ativo recebe um dos seus marcadores de Dispositivo.\n\nUm operativo não pode realizar esta ação no primeiro Ponto de Virada, enquanto estiver no Alcance de Controle de um operativo inimigo ou se aquele marcador de objetivo já possuir um dos seus marcadores de Dispositivo.\n\nPONTOS DE VITÓRIA\nAo final de cada Ponto de Virada após o primeiro:\n- Se o marcador de objetivo do oponente possuir um dos seus marcadores de Dispositivo, você marca 1PV.\n- Para cada outro marcador de objetivo, disputado por operativos inimigos, que possua um dos seus marcadores de Dispositivo, você marca 1PV.\n\nVocê não pode marcar mais de 2PV desta operação por Ponto de Virada.",
+      "source": {
+        "name_en": "PLANT DEVICES",
+        "archetype_en": "Infiltration",
+        "source_card_id": "tac-op-infiltration-plant-devices"
+      }
+    },
+    {
+      "id": "tac-op-infiltration-steal-intelligence",
+      "kind": "tac_op",
+      "number": 2,
+      "name": "Roubar Informações",
+      "archetype": "Infiltração",
+      "content_markdown": "REVELAR\nNa primeira vez que um operativo inimigo for incapacitado.\n\nREGRAS ADICIONAIS\nSempre que um operativo inimigo for incapacitado, antes de ser removido da zona de combate, coloque um dos seus marcadores de missão de Informações dentro do Alcance de Controle dele.\n\nOperativos aliados podem realizar a ação Pegar Marcador em seus marcadores de missão de Informações. Para as condições dessa ação, ignore o primeiro marcador de missão de Informações que o operativo ativo estiver carregando. Em outras palavras, cada operativo aliado pode carregar até dois marcadores de missão de Informações, ou um deles e outro marcador.\n\nPONTOS DE VITÓRIA\nAo final de cada Ponto de Virada após o primeiro, se algum operativo aliado estiver carregando algum de seus marcadores de missão de Informações, você marca 1PV.\n\nAo final da batalha, para cada um dos seus marcadores de missão de Informações que operativos aliados estiverem carregando, você marca 1PV.",
+      "source": {
+        "name_en": "STEAL INTELLIGENCE",
+        "archetype_en": "Infiltration",
+        "source_card_id": "tac-op-infiltration-steal-intelligence"
+      }
+    },
+    {
+      "id": "tac-op-infiltration-track-enemy",
+      "kind": "tac_op",
+      "number": 3,
+      "name": "Rastrear Inimigo",
+      "archetype": "Infiltração",
+      "content_markdown": "REVELAR\nNa primeira vez que você marcar PV desta operação.\n\nREGRAS ADICIONAIS\nUm operativo inimigo está sendo rastreado se for um alvo válido para um operativo aliado a até 6\" dele. Esse operativo aliado deve ter uma ordem de Ocultação, não pode ser um alvo válido para o operativo inimigo que está tentando rastrear e não pode estar no Alcance de Controle de operativos inimigos.\n\nPONTOS DE VITÓRIA\nAo final de cada Ponto de Virada após o primeiro:\n- Se um operativo inimigo estiver sendo rastreado, você marca 1PV; em vez disso, marque 2PV se for o quarto Ponto de Virada.\n- Se dois ou mais operativos inimigos estiverem sendo rastreados, você marca 2PV.\n\nVocê não pode marcar mais de 2PV desta operação por Ponto de Virada.",
+      "source": {
+        "name_en": "TRACK ENEMY",
+        "archetype_en": "Infiltration",
+        "source_card_id": "tac-op-infiltration-track-enemy"
+      }
+    },
+    {
+      "id": "tac-op-recon-flank",
+      "kind": "tac_op",
+      "number": 4,
+      "name": "Flanquear",
+      "archetype": "Reconhecimento",
+      "content_markdown": "REVELAR\nComo uma MANOBRA ESTRATÉGICA.\n\nREGRAS ADICIONAIS\nDivida a zona de combate em dois flancos, esquerdo e direito, traçando uma linha imaginária como a linha central, exceto que ela vai do centro da borda da zona de combate de cada jogador. Um operativo disputa um flanco enquanto estiver inteiramente dentro dele e inteiramente dentro do território do oponente. Operativos aliados controlam um flanco se o APL total dos operativos que o disputam for maior que o dos operativos inimigos.\n\nExemplo: o Jogador 1 controla esse flanco quando o APL total dos operativos do Jogador 1 inteiramente dentro do território do Jogador 2 for maior que o APL total dos operativos do Jogador 2 inteiramente dentro do território do Jogador 1.\n\nPONTOS DE VITÓRIA\nDepois de revelar esta operação, ao final de cada Ponto de Virada após o primeiro, para cada flanco que operativos aliados controlarem, você marca 1PV. No quarto Ponto de Virada, se operativos aliados também controlaram esse flanco ao final do terceiro Ponto de Virada, marque 2PV em vez disso.\n\nVocê não pode marcar mais de 2PV desta operação por Ponto de Virada.",
+      "source": {
+        "name_en": "Flank",
+        "archetype_en": "Recon",
+        "source_card_id": "tac-op-recon-flank"
+      }
+    },
+    {
+      "id": "tac-op-recon-retrieval",
+      "kind": "tac_op",
+      "number": 5,
+      "name": "Recuperação",
+      "archetype": "Reconhecimento",
+      "content_markdown": "REVELAR\nNa primeira vez que você marcar PV desta operação.\n\nAÇÃO DE MISSÃO\nRecuperar — 1PA\nSe o operativo ativo controlar um marcador de objetivo que ainda não tenha sido vasculhado por operativos aliados, esse operativo passa a carregar um dos seus marcadores de missão de Recuperação, e esse marcador de objetivo é vasculhado por operativos aliados. Operativos aliados podem realizar a ação Pegar Marcador nos seus marcadores de missão de Recuperação.\n\nUm operativo não pode realizar esta ação no primeiro Ponto de Virada, enquanto estiver no Alcance de Controle de um operativo inimigo ou se já estiver carregando um marcador.\n\nPONTOS DE VITÓRIA\nNa primeira vez que cada marcador de objetivo for vasculhado por operativos aliados, você marca 1PV.\n\nAo final da batalha, para cada um dos seus marcadores de missão de Recuperação que operativos aliados estiverem carregando, você marca 1PV.",
+      "source": {
+        "name_en": "Retrieval",
+        "archetype_en": "Recon",
+        "source_card_id": "tac-op-recon-retrieval"
+      }
+    },
+    {
+      "id": "tac-op-recon-scout-enemy-movement",
+      "kind": "tac_op",
+      "number": 6,
+      "name": "Reconhecer Movimento Inimigo",
+      "archetype": "Reconhecimento",
+      "content_markdown": "REVELAR\nNa primeira vez que um operativo aliado realizar a ação Reconhecer.\n\nAÇÃO DE MISSÃO\nReconhecer — 1PA\nEscolha um operativo inimigo pronto, visível para o operativo ativo e a mais de 6\" dele. Esse operativo inimigo fica monitorado até a etapa Pronto da próxima Fase de Estratégia.\n\nUm operativo não pode realizar esta ação enquanto tiver uma ordem de Engajar, no primeiro Ponto de Virada ou enquanto estiver no Alcance de Controle de um operativo inimigo.\n\nPONTOS DE VITÓRIA\nAo final de cada Ponto de Virada após o primeiro, para cada operativo inimigo monitorado que esteja visível para operativos aliados, você marca 1PV. Não é necessário que seja o operativo aliado que realizou a ação Reconhecer.\n\nVocê não pode marcar mais de 2PV desta operação por Ponto de Virada.",
+      "source": {
+        "name_en": "Scout Enemy Movement",
+        "archetype_en": "Recon",
+        "source_card_id": "tac-op-recon-scout-enemy-movement"
+      }
+    },
+    {
+      "id": "tac-op-security-plant-banner",
+      "kind": "tac_op",
+      "number": 7,
+      "name": "Posicionar Estandarte",
+      "archetype": "Segurança",
+      "content_markdown": "REVELAR\nQuando você realizar a ação Posicionar Estandarte.\n\nAÇÃO DE MISSÃO\nPosicionar Estandarte — 1PA\nColoque seu marcador de missão de Estandarte dentro do Alcance de Controle do operativo ativo, inteiramente dentro do território do oponente e a mais de 5\" de uma borda neutra da zona de combate. Os operativos podem realizar a ação Pegar Marcador no seu marcador de missão de Estandarte.\n\nUm operativo não pode realizar esta ação no primeiro Ponto de Virada, enquanto estiver no Alcance de Controle de um operativo inimigo ou se um operativo aliado já tiver realizado esta ação durante a batalha.\n\nPONTOS DE VITÓRIA\nAo final de cada Ponto de Virada após o primeiro, se seu marcador de missão de Estandarte estiver inteiramente dentro do território do oponente e operativos aliados o controlarem, você marca 1PV; se isso for verdade e nenhum operativo inimigo o disputar, marque 2PV em vez disso. Para marcar PV, seu marcador de missão de Estandarte deve estar na zona de combate, e não sendo carregado.",
+      "source": {
+        "name_en": "PLANT BANNER",
+        "archetype_en": "Security",
+        "source_card_id": "tac-op-security-plant-banner"
+      }
+    },
+    {
+      "id": "tac-op-security-martyrs",
+      "kind": "tac_op",
+      "number": 8,
+      "name": "Mártires",
+      "archetype": "Segurança",
+      "content_markdown": "REVELAR\nNa primeira vez que um operativo aliado for incapacitado enquanto disputa um marcador de objetivo.\n\nREGRAS ADICIONAIS\nSempre que um operativo aliado for incapacitado enquanto disputa um marcador de objetivo, esse marcador recebe um dos seus marcadores de Mártir. Isso só acontece na primeira vez que cada operativo é incapacitado: se um operativo for incapacitado, preparado novamente, por exemplo por Protocolos de Reanimação da HIEROTEK CIRCLE, e depois for incapacitado outra vez, um segundo marcador de Mártir não pode ser obtido como resultado.\n\nPONTOS DE VITÓRIA\nAo final de cada Ponto de Virada após o primeiro, se operativos aliados disputarem um marcador de objetivo que tenha um ou mais dos seus marcadores de Mártir, você pode remover qualquer quantidade desses marcadores. Para cada marcador removido, você marca 1PV; se operativos aliados também controlarem esse marcador, marque 2PV em vez disso.\n\nVocê não pode marcar mais de 2PV desta operação por Ponto de Virada.",
+      "source": {
+        "name_en": "MARTYRS",
+        "archetype_en": "Security",
+        "source_card_id": "tac-op-security-martyrs"
+      }
+    },
+    {
+      "id": "tac-op-security-envoy",
+      "kind": "tac_op",
+      "number": 9,
+      "name": "Emissário",
+      "archetype": "Segurança",
+      "content_markdown": "REVELAR\nNa primeira vez que você escolher um emissário.\n\nREGRAS ADICIONAIS\nComo uma MANOBRA ESTRATÉGICA em cada Ponto de Virada após o primeiro, escolha um operativo aliado para ser seu emissário até a etapa Pronto da próxima Fase de Estratégia. Você não pode escolher um operativo que tenha escolhido em um Ponto de Virada anterior nem um operativo que seja ignorado para a Kill Op.\n\nPONTOS DE VITÓRIA\nAo final de cada Ponto de Virada após o primeiro, se seu emissário estiver inteiramente dentro do território inimigo e fora do Alcance de Controle de operativos inimigos, você marca 1PV; se isso for verdade e o emissário não tiver perdido nenhum Ferimento durante aquele Ponto de Virada, marque 2PV em vez disso.",
+      "source": {
+        "name_en": "ENVOY",
+        "archetype_en": "Security",
+        "source_card_id": "tac-op-security-envoy"
+      }
+    },
+    {
+      "id": "tac-op-seek-destroy-rout",
+      "kind": "tac_op",
+      "number": 10,
+      "name": "Desbaratar",
+      "archetype": "Buscar e Destruir",
+      "content_markdown": "REVELAR\nNa primeira vez que você marcar PV desta operação.\n\nPONTOS DE VITÓRIA\nSempre que um operativo aliado incapacitar um operativo inimigo, se esse operativo aliado estiver a até 6\" da zona de desembarque do oponente, você marca 1PV; se isso for verdade e aquele operativo inimigo tiver um atributo de Ferimentos de 12 ou mais, marque 2PV em vez disso.\n\nVocê não pode marcar mais de 2PV desta operação por Ponto de Virada.",
+      "source": {
+        "name_en": "ROUT",
+        "archetype_en": "Seek & Destroy",
+        "source_card_id": "tac-op-seek-destroy-rout"
+      }
+    },
+    {
+      "id": "tac-op-seek-destroy-sweep-clear",
+      "kind": "tac_op",
+      "number": 11,
+      "name": "Varrer e Limpar",
+      "archetype": "Buscar e Destruir",
+      "content_markdown": "REVELAR\nNa primeira vez que um operativo inimigo for incapacitado enquanto disputa um marcador de objetivo, ou na primeira vez que um operativo aliado realizar a ação Limpar, o que ocorrer primeiro.\n\nREGRAS ADICIONAIS\nQuando um operativo inimigo que disputa um marcador de objetivo for incapacitado, esse marcador de objetivo recebe um dos seus marcadores de Varrido, se ainda não tiver um, até a etapa Pronto da próxima Fase de Estratégia.\n\nAÇÃO DE MISSÃO\nLimpar — 1PA\nUm marcador de objetivo controlado pelo operativo ativo é limpo para o Ponto de Virada.\n\nUm operativo não pode realizar esta ação no primeiro Ponto de Virada nem enquanto estiver no Alcance de Controle de um operativo inimigo.\n\nPONTOS DE VITÓRIA\nAo final de cada Ponto de Virada após o primeiro, se pelo menos um marcador de objetivo, exceto o seu marcador de objetivo, estiver limpo e operativos inimigos não disputarem esse marcador, você marca 1PV. Se esse marcador também tiver um dos seus marcadores de Varrido, marque 2PV em vez disso.\n\nSe operativos aliados controlarem um marcador de objetivo que tenha um dos seus marcadores de Varrido, você marca 1PV.\n\nVocê não pode marcar mais de 2PV desta operação por Ponto de Virada.",
+      "source": {
+        "name_en": "SWEEP & CLEAR",
+        "archetype_en": "Seek & Destroy",
+        "source_card_id": "tac-op-seek-destroy-sweep-clear"
+      }
+    },
+    {
+      "id": "tac-op-seek-destroy-dominate",
+      "kind": "tac_op",
+      "number": 12,
+      "name": "Dominar",
+      "archetype": "Buscar e Destruir",
+      "content_markdown": "REVELAR\nNa primeira vez que um operativo inimigo for incapacitado por um operativo aliado.\n\nREGRAS ADICIONAIS\nSempre que um operativo aliado incapacitar um operativo inimigo, esse operativo aliado recebe um dos seus marcadores de Dominar, ou dois dos seus marcadores de Dominar se o operativo inimigo tiver um atributo de Ferimentos de 12 ou mais.\n\nPONTOS DE VITÓRIA\nAo final do terceiro e do quarto Ponto de Virada, você pode remover marcadores de Dominar de operativos aliados que não estejam incapacitados. Para cada marcador removido, você marca 1PV.\n\nVocê não pode marcar mais de 3PV desta operação por Ponto de Virada.",
+      "source": {
+        "name_en": "DOMINATE",
+        "archetype_en": "Seek & Destroy",
+        "source_card_id": "tac-op-seek-destroy-dominate"
+      }
+    }
+  ]
+}
